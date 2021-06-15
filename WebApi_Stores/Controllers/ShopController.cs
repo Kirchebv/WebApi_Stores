@@ -28,7 +28,7 @@ namespace WebApi_Stores.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         /// <response code="200">Success</response>
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "Get")]
         [ProducesResponseType(typeof(Shop), 200)]
         public IActionResult Get(int id)
         {
@@ -68,10 +68,10 @@ namespace WebApi_Stores.Controllers
         /// </remarks>
         /// <param name="shop"></param>
         /// <returns></returns>
-        /// <response code="200">Success</response>
         /// <response code="201">Shop created</response>
         /// <response code="400">If the item is null</response> 
         [HttpPost]
+        [ProducesResponseType(typeof(Shop), 201)]
         public IActionResult Post([FromBody] Shop shop)
         {
             try
@@ -83,7 +83,7 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Created(nameof(Get), shop.Id);
+            return CreatedAtRoute("Get", new { id = shop.Id }, shop);
         }
 
         /// <summary>

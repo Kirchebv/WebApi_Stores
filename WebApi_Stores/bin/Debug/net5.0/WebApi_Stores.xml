@@ -39,7 +39,6 @@
              </remarks>
              <param name="shop"></param>
              <returns></returns>
-             <response code="200">Success</response>
              <response code="201">Shop created</response>
              <response code="400">If the item is null</response> 
         </member>

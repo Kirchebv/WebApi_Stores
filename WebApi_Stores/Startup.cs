@@ -32,7 +32,8 @@ namespace WebApi_Stores
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
+            //services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
+            services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<DbService>();
 
             services.AddControllers();
