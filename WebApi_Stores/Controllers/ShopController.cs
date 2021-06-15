@@ -12,6 +12,7 @@ using WebApi_Stores.Repositories;
 
 namespace WebApi_Stores.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class ShopController : ControllerBase
@@ -21,7 +22,11 @@ namespace WebApi_Stores.Controllers
         {
             _manager = manager;
         }
-
+        /// <summary>
+        /// Get shop data by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
         {
@@ -35,6 +40,34 @@ namespace WebApi_Stores.Controllers
             return new JsonResult(shop);
         }
 
+        /// <summary>
+        /// Add new shop
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     {
+        ///         "id": 10,
+        ///         "store": "Bremen",
+        ///         "countryCode": "DE",
+        ///         "storeEmail": "Bremen@detego.com",
+        ///         "storeMgr_FirstName": "Cory",
+        ///         "storeMgr_LastName": "Vivian",
+        ///         "storeMgr_Email": "cvivian9@t.co",
+        ///         "category": 3,
+        ///         "stock_Backstore": 319,
+        ///         "stock_Frontstore": 1794,
+        ///         "stock_ShoppingWindow": 4,
+        ///         "stockAccuracy": 0.817,
+        ///         "onFloorAvailability": 0.808,
+        ///         "stock_MeanAge_days": 14
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="shop"></param>
+        /// <returns></returns>
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response> 
         [HttpPost]
         public IActionResult Post([FromBody] Shop shop)
         {
@@ -47,11 +80,18 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return Created(nameof(Get), shop.Id);
         }
 
+        /// <summary>
+        /// Change shop details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="shop"></param>
+        /// <returns></returns>
+        /// <response code="400">If the item is null</response> 
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Put(int id, [FromBody] Shop shop) // [FromBody] JsonElement val
+        public IActionResult Put(int id, [FromBody] Shop shop) // [FromBody] JsonElement val
         {
             //JsonElement value;
             //int storeId = 0;
@@ -74,9 +114,15 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return NoContent();
         }
 
+        /// <summary>
+        /// Delete shop data
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <response code="400">If the item is null</response> 
         [HttpDelete("{id:int}")]
         public IActionResult Delete(int id)
         {
@@ -89,9 +135,14 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return Ok();
+            return NoContent();
         }
 
+        /// <summary>
+        /// Get shop characteristics
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("characteristics/{id}")]
         public IActionResult Сharacteristics(int id)
         {

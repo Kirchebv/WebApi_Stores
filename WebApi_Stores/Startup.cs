@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using WebApi_Stores.Repositories;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
+using System.IO;
 
 namespace WebApi_Stores
 {
@@ -37,7 +39,10 @@ namespace WebApi_Stores
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Swagger", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shop API", Version = "v1" });
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 
@@ -48,7 +53,10 @@ namespace WebApi_Stores
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication2 v1"));
+                app.UseSwaggerUI(c => {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop controller");
+                    c.RoutePrefix = "";
+                });
             }
 
             if (env.IsDevelopment())

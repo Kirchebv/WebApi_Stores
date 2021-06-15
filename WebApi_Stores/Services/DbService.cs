@@ -12,7 +12,7 @@ namespace WebApi_Stores.Repositories
     {
 
         private readonly IServiceProvider _provider;
-             
+
         public DbService(IServiceProvider provider)
         {
             _provider = provider;

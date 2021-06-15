@@ -5985,19 +5985,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kirbv\\.nuget\\packages\\": {}
+    "C:\\Users\\kbaev\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kirbv\\source\\repos\\WebApi_Stores\\WebApi_Stores\\WebApi_Stores.csproj",
+      "projectUniqueName": "C:\\Users\\kbaev\\Documents\\GitHub\\WebApi_Stores\\WebApi_Stores\\WebApi_Stores.csproj",
       "projectName": "WebApi_Stores",
-      "projectPath": "C:\\Users\\kirbv\\source\\repos\\WebApi_Stores\\WebApi_Stores\\WebApi_Stores.csproj",
-      "packagesPath": "C:\\Users\\kirbv\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kirbv\\source\\repos\\WebApi_Stores\\WebApi_Stores\\obj\\",
+      "projectPath": "C:\\Users\\kbaev\\Documents\\GitHub\\WebApi_Stores\\WebApi_Stores\\WebApi_Stores.csproj",
+      "packagesPath": "C:\\Users\\kbaev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kbaev\\Documents\\GitHub\\WebApi_Stores\\WebApi_Stores\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kirbv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kbaev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
