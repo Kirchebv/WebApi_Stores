@@ -27,7 +27,9 @@ namespace WebApi_Stores.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        /// <response code="200">Success</response>
         [HttpGet("{id:int}")]
+        [ProducesResponseType(typeof(Shop), 200)]
         public IActionResult Get(int id)
         {
             Shop shop = _manager.Get(id);
@@ -66,7 +68,8 @@ namespace WebApi_Stores.Controllers
         /// </remarks>
         /// <param name="shop"></param>
         /// <returns></returns>
-        /// <response code="201">Returns the newly created item</response>
+        /// <response code="200">Success</response>
+        /// <response code="201">Shop created</response>
         /// <response code="400">If the item is null</response> 
         [HttpPost]
         public IActionResult Post([FromBody] Shop shop)
@@ -89,6 +92,7 @@ namespace WebApi_Stores.Controllers
         /// <param name="id"></param>
         /// <param name="shop"></param>
         /// <returns></returns>
+        /// <response code="200">Success</response>
         /// <response code="400">If the item is null</response> 
         [HttpPut("{id:int}")]
         public IActionResult Put(int id, [FromBody] Shop shop) // [FromBody] JsonElement val
@@ -114,7 +118,7 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return NoContent();
+            return new EmptyResult();
         }
 
         /// <summary>
@@ -122,6 +126,7 @@ namespace WebApi_Stores.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        /// <response code="200">Success</response>
         /// <response code="400">If the item is null</response> 
         [HttpDelete("{id:int}")]
         public IActionResult Delete(int id)
@@ -135,7 +140,7 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return NoContent();
+            return new EmptyResult();
         }
 
         /// <summary>
@@ -143,7 +148,9 @@ namespace WebApi_Stores.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        /// <response code="200">Success</response>
         [HttpGet("characteristics/{id}")]
+        [ProducesResponseType(typeof(ShopСharacteristicsDTO), 200)]
         public IActionResult Сharacteristics(int id)
         {
             ShopСharacteristicsDTO shopСharacteristics = _manager.GetCharacteristics(id);
