@@ -22,6 +22,20 @@ namespace WebApi_Stores.Controllers
         {
             _manager = manager;
         }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            List<Shop> shops = _manager.GetAll();
+
+            if (shops.Count == 0)
+            {
+                return new EmptyResult();
+            }
+
+            return new JsonResult(shops);
+        }
+
         /// <summary>
         /// Get shop data by id
         /// </summary>
@@ -36,7 +50,7 @@ namespace WebApi_Stores.Controllers
 
             if (shop == null)
             {
-                return NoContent();
+                return new EmptyResult();
             }
 
             return new JsonResult(shop);
@@ -157,7 +171,8 @@ namespace WebApi_Stores.Controllers
 
             if (shopСharacteristics == null)
             {
-                return NoContent();
+                
+                return new EmptyResult();
             }
 
             return new JsonResult(shopСharacteristics);

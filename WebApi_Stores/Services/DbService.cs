@@ -68,6 +68,14 @@ namespace WebApi_Stores.Repositories
             return Context.Shops.FirstOrDefault(m => m.Id == id);
         }
 
+        public List<Shop> GetAll()
+        {
+            using var scope = _provider.CreateScope();
+            var Context = scope.ServiceProvider.GetRequiredService<ShopContext>();
+
+            return Context.Shops.ToList<Shop>();
+        }
+
         public ShopСharacteristicsDTO GetCharacteristics(int id)
         {
             using var scope = _provider.CreateScope();

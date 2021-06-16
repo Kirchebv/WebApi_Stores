@@ -126,3 +126,5 @@ C:\Users\kirbv\source\repos\WebApi_Stores\WebApi_Stores\bin\Debug\net5.0\WebApi_
 C:\Users\kirbv\source\repos\WebApi_Stores\WebApi_Stores\bin\Debug\net5.0\Npgsql.dll
 C:\Users\kirbv\source\repos\WebApi_Stores\WebApi_Stores\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\kirbv\source\repos\WebApi_Stores\WebApi_Stores\obj\Debug\net5.0\WebApi_Stores.xml
+C:\Users\kbaev\Documents\GitHub\WebApi_Stores\WebApi_Stores\bin\Debug\net5.0\Npgsql.dll
+C:\Users\kbaev\Documents\GitHub\WebApi_Stores\WebApi_Stores\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

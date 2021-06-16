@@ -15,6 +15,7 @@ using WebApi_Stores.Repositories;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
+using Microsoft.Extensions.FileProviders;
 
 namespace WebApi_Stores
 {
@@ -32,8 +33,8 @@ namespace WebApi_Stores
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
-            //services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
+            //services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
+            services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<DbService>();
 
             services.AddControllers();
@@ -50,26 +51,28 @@ namespace WebApi_Stores
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop controller");
-                    c.RoutePrefix = "";
-                });
-            }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop controller");
+                c.RoutePrefix = "";
+            });
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(
+            //    Path.Combine(Directory.GetCurrentDirectory(), @"Frontend"))
+            //});
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
