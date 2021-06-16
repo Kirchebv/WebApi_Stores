@@ -1,4 +1,4 @@
-import Home from './pages/Home'
+import React from 'react';
 import ShopList from './comp/ShopList';
 import Context from './context'
 
@@ -7,9 +7,10 @@ function App() {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(()=>{
-      fetch('https://localhost:44314/api/shop')
+      fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
         .then(response => response.json())
         .then(json => {
+          console.log(json);
           setShops(json);
           setLoading(false);
         })

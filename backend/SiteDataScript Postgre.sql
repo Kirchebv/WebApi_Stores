@@ -1,7 +1,4 @@
-﻿USE [ShopsDb]
-GO
-,
-('Berlin', 'DE', 'Berlin@detego.com', 'Freddie', 'Emmot', 'femmot0@squidoo.com', 10, 1514, 5865, 43, 0.946, 0.888, 13),
+﻿insert into shops (store, countrycode, storeemail, storemgr_firstname, storemgr_lastname, storemgr_email, category, stock_backstore, stock_frontstore, stock_shoppingwindow, stockaccuracy, onflooravailability, stock_meanage_days) values('Berlin', 'DE', 'Berlin@detego.com', 'Freddie', 'Emmot', 'femmot0@squidoo.com', 10, 1514, 5865, 43, 0.946, 0.888, 13),
 ('Hamburg', 'DE', 'Hamburg@detego.com', 'Kearney', 'Roth', 'kroth1@geocities.jp', 5, 863, 2581, 18, 0.806, 0.999, 11),
 ('München', 'DE', 'München@detego.com', 'Drusy', 'Risby', 'drisby2@wikimedia.org', 6, 1195, 4309, 9, 0.987, 0.945, 7),
 ('Köln', 'DE', 'Köln@detego.com', 'Penny', 'Tonsley', 'ptonsley3@engadget.com', 6, 876, 4259, 12, 0.902, 0.936, 10),

@@ -33,8 +33,8 @@ namespace WebApi_Stores
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            //services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
-            services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
+            //services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<DbService>();
 
             services.AddControllers();
@@ -68,7 +68,7 @@ namespace WebApi_Stores
             //    Path.Combine(Directory.GetCurrentDirectory(), @"Frontend"))
             //});
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 

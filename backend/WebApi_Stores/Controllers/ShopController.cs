@@ -28,12 +28,7 @@ namespace WebApi_Stores.Controllers
         {
             List<Shop> shops = _manager.GetAll();
 
-            if (shops.Count == 0)
-            {
-                return new EmptyResult();
-            }
-
-            return new JsonResult(shops);
+            return Ok(shops);
         }
 
         /// <summary>
@@ -42,6 +37,7 @@ namespace WebApi_Stores.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         /// <response code="200">Success</response>
+        /// <response code="404">Not found</response>
         [HttpGet("{id:int}", Name = "Get")]
         [ProducesResponseType(typeof(Shop), 200)]
         public IActionResult Get(int id)
@@ -50,10 +46,10 @@ namespace WebApi_Stores.Controllers
 
             if (shop == null)
             {
-                return new EmptyResult();
+                return NotFound();
             }
 
-            return new JsonResult(shop);
+            return Ok(shop);
         }
 
         /// <summary>
@@ -132,7 +128,7 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return new EmptyResult();
+            return Ok();
         }
 
         /// <summary>
@@ -154,7 +150,7 @@ namespace WebApi_Stores.Controllers
                 return BadRequest(ex.Message);
             }
 
-            return new EmptyResult();
+            return Ok();
         }
 
         /// <summary>
@@ -163,6 +159,7 @@ namespace WebApi_Stores.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         /// <response code="200">Success</response>
+        /// <response code="404">Not found</response>
         [HttpGet("characteristics/{id}")]
         [ProducesResponseType(typeof(ShopСharacteristicsDTO), 200)]
         public IActionResult Сharacteristics(int id)
@@ -172,10 +169,10 @@ namespace WebApi_Stores.Controllers
             if (shopСharacteristics == null)
             {
                 
-                return new EmptyResult();
+                return NotFound();
             }
 
-            return new JsonResult(shopСharacteristics);
+            return Ok(shopСharacteristics);
         }
     }
 }

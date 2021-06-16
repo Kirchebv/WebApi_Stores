@@ -23,62 +23,76 @@ namespace WebApi_Stores.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer")
+                        .HasColumnName("id")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
                     b.Property<short>("Category")
-                        .HasColumnType("SMALLINT");
+                        .HasColumnType("SMALLINT")
+                        .HasColumnName("category");
 
                     b.Property<string>("CountryCode")
                         .IsRequired()
                         .HasMaxLength(2)
-                        .HasColumnType("char(2)");
+                        .HasColumnType("char(2)")
+                        .HasColumnName("countrycode");
 
                     b.Property<float>("OnFloorAvailability")
-                        .HasColumnType("real");
+                        .HasColumnType("real")
+                        .HasColumnName("onflooravailability");
 
                     b.Property<float>("StockAccuracy")
-                        .HasColumnType("real");
+                        .HasColumnType("real")
+                        .HasColumnName("stockaccuracy");
 
                     b.Property<int>("Stock_Backstore")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("stock_backstore");
 
                     b.Property<int>("Stock_Frontstore")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("stock_frontstore");
 
                     b.Property<int>("Stock_MeanAge_days")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("stock_meanage_days");
 
                     b.Property<int>("Stock_ShoppingWindow")
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("stock_shoppingwindow");
 
                     b.Property<string>("Store")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("NVARCHAR(255)");
+                        .HasColumnType("VARCHAR(255)")
+                        .HasColumnName("store");
 
                     b.Property<string>("StoreEmail")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("VARCHAR(255)");
+                        .HasColumnType("VARCHAR(255)")
+                        .HasColumnName("storeemail");
 
                     b.Property<string>("StoreMgr_Email")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("VARCHAR(255)");
+                        .HasColumnType("VARCHAR(255)")
+                        .HasColumnName("storemgr_email");
 
                     b.Property<string>("StoreMgr_FirstName")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("NVARCHAR(255)");
+                        .HasColumnType("VARCHAR(255)")
+                        .HasColumnName("storemgr_firstname");
 
                     b.Property<string>("StoreMgr_LastName")
                         .IsRequired()
                         .HasMaxLength(255)
-                        .HasColumnType("NVARCHAR(255)");
+                        .HasColumnType("VARCHAR(255)")
+                        .HasColumnName("storemgr_lastname");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shops");
+                    b.ToTable("shops");
                 });
 #pragma warning restore 612, 618
         }

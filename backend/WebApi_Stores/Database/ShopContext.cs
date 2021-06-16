@@ -12,14 +12,13 @@ namespace WebApi_Stores
     {
         public ShopContext(DbContextOptions<ShopContext> options) : base(options)
         {
-            Debug.WriteLine("CREATE");
         }
         public DbSet<Shop> Shops { get; set;}
 
-        public override void Dispose()
-        {
-            Debug.WriteLine("DISPOSE");
-            base.Dispose();
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Shop>().ToTable("shops");
+        //}
+
     }
 }

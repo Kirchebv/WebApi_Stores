@@ -22,7 +22,7 @@ function ShopItem(props) {
     return (
         <li style={styles.li}>
             <span>
-                {props.shop.store}
+                {props.shop.title}
             </span>
             <button className='rm' onClick={removeShop.bind(null, props.shop.id)}>&times;</button>
         </li>
