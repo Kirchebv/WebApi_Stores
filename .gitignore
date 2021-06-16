@@ -1,0 +1,5 @@
+/frontend/node_modules
+/backend/WebApi_Stores/bin
+/backend/WebApi_Stores/obj
+/backend/WebApi_Stores/publish
+/backend/.vs
