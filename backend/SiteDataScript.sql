@@ -1,79 +1,79 @@
-﻿USE [ShopsDb]
+﻿USE [shopsDb]
 GO
-,
-('Berlin', 'DE', 'Berlin@detego.com', 'Freddie', 'Emmot', 'femmot0@squidoo.com', 10, 1514, 5865, 43, 0.946, 0.888, 13),
-('Hamburg', 'DE', 'Hamburg@detego.com', 'Kearney', 'Roth', 'kroth1@geocities.jp', 5, 863, 2581, 18, 0.806, 0.999, 11),
-('München', 'DE', 'München@detego.com', 'Drusy', 'Risby', 'drisby2@wikimedia.org', 6, 1195, 4309, 9, 0.987, 0.945, 7),
-('Köln', 'DE', 'Köln@detego.com', 'Penny', 'Tonsley', 'ptonsley3@engadget.com', 6, 876, 4259, 12, 0.902, 0.936, 10),
-('Frankfurt am Main', 'DE', 'Frankfurt@detego.com', 'Andy', 'Giuroni', 'agiuroni4@europa.eu', 7, 965, 2815, 7, 0.971, 0.965, 8),
-('Stuttgart', 'DE', 'Stuttgart@detego.com', 'Nolly', 'Fairham', 'nfairham5@51.la', 5, 733, 2089, 21, 0.837, 0.984, 5),
-('Düsseldorf', 'DE', 'Düsseldorf@detego.com', 'Kissie', 'Delany', 'kdelany6@over-blog.com', 6, 999, 3065, 16, 0.889, 0.827, 8),
-('Dortmund', 'DE', 'Dortmund@detego.com', 'Chris', 'Darby', 'cdarby7@chron.com', 5, 512, 2378, 20, 0.826, 0.943, 5),
-('Essen', 'DE', 'Essen@detego.com', 'Gnni', 'Surphliss', 'gsurphliss8@mit.edu', 6, 1041, 3782, 28, 0.975, 0.917, 15),
-('Bremen', 'DE', 'Bremen@detego.com', 'Cory', 'Vivian', 'cvivian9@t.co', 3, 319, 1794, 4, 0.817, 0.808, 14),
-('Leipzig', 'DE', 'Leipzig@detego.com', 'Raquela', 'Siene', 'rsienea@cbslocal.com', 4, 537, 2853, 20, 0.975, 0.962, 15),
-('Dresden', 'DE', 'Dresden@detego.com', 'Melitta', 'O''Cannan', 'mocannanb@livejournal.com', 7, 732, 4261, 18, 0.894, 0.999, 15),
-('Hannover', 'DE', 'Hannover@detego.com', 'Derrek', 'Ross', 'drossc@java.com', 7, 753, 3277, 9, 0.902, 0.848, 6),
-('Nürnberg', 'DE', 'Nürnberg@detego.com', 'Vanya', 'Berard', 'vberardd@wordpress.com', 5, 825, 3715, 9, 0.979, 0.835, 13),
-('Duisburg', 'DE', 'Duisburg@detego.com', 'Ario', 'Hancorn', 'ahancorne@cyberchimps.com', 4, 682, 2501, 17, 0.922, 0.899, 12),
-('Bochum', 'DE', 'Bochum@detego.com', 'Trumaine', 'Franzen', 'tfranzenf@mayoclinic.com', 5, 954, 3605, 5, 0.949, 0.872, 5),
-('Wuppertal', 'DE', 'Wuppertal@detego.com', 'Chalmers', 'Newing', 'cnewingg@yahoo.com', 6, 910, 3258, 13, 0.804, 0.958, 10),
-('Bielefeld', 'DE', 'Bielefeld@detego.com', 'Arlen', 'Hardwell', 'ahardwellh@jugem.jp', 4, 776, 2255, 14, 0.987, 0.896, 11),
-('Bonn', 'DE', 'Bonn@detego.com', 'Neile', 'Wimmer', 'nwimmeri@springer.com', 6, 1074, 4358, 25, 0.946, 0.965, 6),
-('Münster', 'DE', 'Münster@detego.com', 'Pammi', 'Cherrett', 'pcherrettj@amazon.de', 6, 798, 3223, 9, 0.99, 0.873, 9),
-('Karlsruhe', 'DE', 'Karlsruhe@detego.com', 'Dorolice', 'Lindenblatt', 'dlindenblattk@wired.com', 6, 1011, 3873, 7, 0.91, 0.882, 5),
-('Mannheim', 'DE', 'Mannheim@detego.com', 'Klemens', 'O''Neill', 'koneilll@histats.com', 3, 555, 2147, 9, 0.899, 0.815, 12),
-('Augsburg', 'DE', 'Augsburg@detego.com', 'Abbey', 'O''Keeffe', 'aokeeffem@forbes.com', 6, 602, 3127, 15, 0.844, 0.801, 10),
-('Wiesbaden', 'DE', 'Wiesbaden@detego.com', 'Marlowe', 'Maccraw', 'mmaccrawn@naver.com', 4, 561, 2374, 20, 0.824, 0.814, 14),
-('Gelsenkirchen', 'DE', 'Gelsenkirchen@detego.com', 'Siobhan', 'Padilla', 'spadillao@webeden.co.uk', 6, 990, 4113, 9, 0.95, 0.891, 14),
-('Mönchengladbach', 'DE', 'Mönchengladbach@detego.com', 'Tobi', 'MacKeig', 'tmackeigp@eventbrite.com', 3, 391, 2226, 8, 0.837, 0.973, 7),
-('Braunschweig', 'DE', 'Braunschweig@detego.com', 'Sonnie', 'Beldham', 'sbeldhamq@eventbrite.com', 6, 729, 3401, 13, 0.951, 0.865, 15),
-('Chemnitz', 'DE', 'Chemnitz@detego.com', 'Alexis', 'Preator', 'apreatorr@techcrunch.com', 4, 493, 3120, 13, 0.825, 0.922, 5),
-('Aachen', 'DE', 'Aachen@detego.com', 'Sondra', 'Edinborough', 'sedinboroughs@bloomberg.com', 5, 568, 2398, 10, 0.885, 0.861, 11),
-('Kiel', 'DE', 'Kiel@detego.com', 'Moses', 'Killiner', 'mkillinert@naver.com', 4, 436, 1718, 8, 0.856, 0.879, 8),
-('Halle (Saale)', 'DE', 'Halle@detego.com', 'Andriette', 'Liffey', 'aliffeyu@wix.com', 4, 559, 3025, 13, 0.981, 0.96, 15),
-('Magdeburg', 'DE', 'Magdeburg@detego.com', 'Nickola', 'Kench', 'nkenchv@mit.edu', 5, 809, 2141, 11, 0.942, 0.983, 5),
-('Krefeld', 'DE', 'Krefeld@detego.com', 'Kerby', 'Pecht', 'kpechtw@free.fr', 5, 683, 3874, 17, 0.806, 0.843, 12),
-('Freiburg im Breisgau', 'DE', 'Freiburg@detego.com', 'Prinz', 'Verrico', 'pverricox@redcross.org', 6, 1185, 2417, 19, 0.981, 0.984, 5),
-('Lübeck', 'DE', 'Lübeck@detego.com', 'Byrom', 'Ferre', 'bferrey@unc.edu', 6, 611, 3292, 8, 0.814, 0.922, 8),
-('Oberhausen', 'DE', 'Oberhausen@detego.com', 'Tracy', 'Bucklee', 'tbuckleez@netlog.com', 4, 523, 2646, 12, 0.872, 0.948, 8),
-('Erfurt', 'DE', 'Erfurt@detego.com', 'Bryan', 'Papis', 'bpapis10@wordpress.com', 4, 792, 2086, 10, 0.992, 0.841, 7),
-('Mainz', 'DE', 'Mainz@detego.com', 'Leonhard', 'Duffil', 'lduffil11@mapquest.com', 3, 469, 1729, 3, 0.927, 0.863, 9),
-('Rostock', 'DE', 'Rostock@detego.com', 'Agnes', 'McIlenna', 'amcilenna12@gnu.org', 5, 720, 3228, 16, 0.966, 0.877, 12),
-('Kassel', 'DE', 'Kassel@detego.com', 'Prentice', 'Skerman', 'pskerman13@t.co', 3, 565, 2315, 13, 0.907, 0.849, 8),
-('Hagen', 'DE', 'Hagen@detego.com', 'Amity', 'McBride', 'amcbride14@uiuc.edu', 5, 885, 3354, 6, 0.955, 0.963, 12),
-('Saarbrücken', 'DE', 'Saarbrücken@detego.com', 'Georgie', 'Trumper', 'gtrumper15@google.fr', 4, 735, 2443, 16, 0.894, 0.84, 11),
-('Hamm', 'DE', 'Hamm@detego.com', 'Orelee', 'Dumbare', 'odumbare16@gnu.org', 6, 970, 3174, 18, 0.869, 0.967, 12),
-('Mülheim an der Ruhr', 'DE', 'Mülheim@detego.com', 'Berny', 'Troyes', 'btroyes17@ebay.co.uk', 4, 540, 2840, 10, 0.922, 0.982, 6),
-('Ludwigshafen am Rhein', 'DE', 'Ludwigshafen@detego.com', 'Tobias', 'Chiverstone', 'tchiverstone18@jiathis.com', 6, 1105, 3994, 23, 0.805, 0.951, 13),
-('Potsdam', 'DE', 'Potsdam@detego.com', 'Wandis', 'Esposita', 'wesposita19@ebay.com', 6, 643, 3909, 9, 0.933, 0.983, 8),
-('Leverkusen', 'DE', 'Leverkusen@detego.com', 'Rachel', 'Bau', 'rbau1a@printfriendly.com', 6, 987, 4561, 22, 0.987, 0.999, 14),
-('Oldenburg', 'DE', 'Oldenburg@detego.com', 'Virgie', 'Kondratenya', 'vkondratenya1b@blinklist.com', 3, 405, 2320, 9, 0.838, 0.916, 7),
-('Osnabrück', 'DE', 'Osnabrück@detego.com', 'Rhianna', 'McDonough', 'rmcdonough1c@oaic.gov.au', 6, 767, 4289, 23, 0.857, 0.805, 15),
-('Solingen', 'DE', 'Solingen@detego.com', 'Mayer', 'Bingle', 'mbingle1d@msn.com', 3, 329, 1697, 6, 0.958, 0.982, 7),
-('Herne', 'DE', 'Herne@detego.com', 'Antonetta', 'Ashment', 'aashment1e@usatoday.com', 3, 552, 2209, 12, 0.928, 0.819, 8),
-('Neuss', 'DE', 'Neuss@detego.com', 'Tanhya', 'Wildblood', 'twildblood1f@360.cn', 5, 535, 3581, 11, 0.978, 0.881, 9),
-('Heidelberg', 'DE', 'Heidelberg@detego.com', 'Danella', 'McAuley', 'dmcauley1g@aboutads.info', 4, 796, 2394, 11, 0.939, 0.804, 8),
-('Darmstadt', 'DE', 'Darmstadt@detego.com', 'Grethel', 'Tchir', 'gtchir1h@dion.ne.jp', 3, 314, 2331, 11, 0.886, 0.808, 5),
-('Paderborn', 'DE', 'Paderborn@detego.com', 'Araldo', 'McEvoy', 'amcevoy1i@wordpress.org', 5, 978, 3216, 20, 0.896, 0.942, 5),
-('Regensburg', 'DE', 'Regensburg@detego.com', 'Belva', 'Luckwell', 'bluckwell1j@engadget.com', 5, 942, 2029, 24, 0.807, 0.86, 5),
-('Ingolstadt', 'DE', 'Ingolstadt@detego.com', 'Carolina', 'Hellyar', 'chellyar1k@businesswire.com', 2, 220, 1146, 7, 0.898, 0.821, 9),
-('Würzburg', 'DE', 'Würzburg@detego.com', 'Eamon', 'Bubbear', 'ebubbear1l@wordpress.org', 4, 603, 3063, 8, 0.895, 0.92, 10),
-('Wolfsburg', 'DE', 'Wolfsburg@detego.com', 'Rachel', 'Dumbreck', 'rdumbreck1m@indiegogo.com', 4, 670, 1919, 10, 0.82, 0.929, 14),
-('Fürth', 'DE', 'Fürth@detego.com', 'Jobyna', 'Duncan', 'jduncan1n@illinois.edu', 3, 313, 1622, 7, 0.905, 0.982, 9),
-('Ulm', 'DE', 'Ulm@detego.com', 'Marney', 'Ravel', 'mravel1o@mtv.com', 6, 1183, 4766, 21, 0.907, 0.857, 6),
-('Offenbach am Main', 'DE', 'Offenbach@detego.com', 'Allin', 'McShee', 'amcshee1p@vimeo.com', 6, 814, 3391, 23, 0.833, 0.899, 12),
-('Heilbronn', 'DE', 'Heilbronn@detego.com', 'Orelie', 'Kersaw', 'okersaw1q@fastcompany.com', 3, 537, 1311, 13, 0.815, 0.905, 6),
-('Pforzheim', 'DE', 'Pforzheim@detego.com', 'Madison', 'Axelbey', 'maxelbey1r@ft.com', 4, 556, 2102, 19, 0.983, 0.831, 12),
-('Göttingen', 'DE', 'Göttingen@detego.com', 'Darren', 'Breckenridge', 'dbreckenridge1s@buzzfeed.com', 6, 981, 3820, 27, 0.863, 0.817, 12),
-('Bottrop', 'DE', 'Bottrop@detego.com', 'Eldridge', 'Gosnoll', 'egosnoll1t@ihg.com', 6, 672, 2775, 21, 0.926, 0.803, 8),
-('Recklinghausen', 'DE', 'Recklinghausen@detego.com', 'Roderich', 'Gratland', 'rgratland1u@bigcartel.com', 4, 676, 2384, 6, 0.846, 0.986, 10),
-('Reutlingen', 'DE', 'Reutlingen@detego.com', 'Christoforo', 'Frederick', 'cfrederick1v@comcast.net', 2, 333, 831, 5, 0.817, 0.895, 14),
-('Koblenz', 'DE', 'Koblenz@detego.com', 'Heath', 'Beamand', 'hbeamand1w@alibaba.com', 5, 875, 3306, 19, 0.855, 0.814, 9),
-('Bergisch Gladbach', 'DE', 'BergischGladbach@detego.com', 'Andros', 'Stammirs', 'astammirs1x@mysql.com', 2, 296, 1442, 3, 0.85, 0.969, 8),
-('Remscheid', 'DE', 'Remscheid@detego.com', 'Merola', 'Rupert', 'mrupert1y@purevolume.com', 4, 400, 3025, 5, 0.966, 0.929, 14),
-('Bremerhaven', 'DE', 'Bremerhaven@detego.com', 'Caryn', 'Cracie', 'ccracie1z@google.com.hk', 4, 712, 2884, 10, 0.839, 0.866, 10),
-('Jena', 'DE', 'Jena@detego.com', 'Georgina', 'Edinburgh', 'gedinburgh20@comcast.net', 3, 540, 2164, 3, 0.874, 0.829, 6),
-('Trier', 'DE', 'Trier@detego.com', 'Saunders', 'Keveren', 'skeveren21@vk.com', 6, 892, 3211, 7, 0.841, 0.869, 5),
-('Erlangen', 'DE', 'Erlangen@detego.com', 'Milissent', 'Scarman', 'mscarman22@pbs.org', 5, 567, 2127, 16, 0.96, 0.915, 7),
-('Moers', 'DE', 'Moers@detego.com', 'Giana', 'Lethebridge', 'glethebridge23@wiley.com', 2, 253, 1475, 9, 0.85, 0.957, 9)
+
+insert into shops values('Berlin', 'DE', 'Berlin@detego.com', 'Freddie', 'Emmot', 'femmot0@squidoo.com', 10, 1514, 5865, 43, 0.946, 0.888, 13)
+insert into shops values('Hamburg', 'DE', 'Hamburg@detego.com', 'Kearney', 'Roth', 'kroth1@geocities.jp', 5, 863, 2581, 18, 0.806, 0.999, 11)
+insert into shops values('München', 'DE', 'München@detego.com', 'Drusy', 'Risby', 'drisby2@wikimedia.org', 6, 1195, 4309, 9, 0.987, 0.945, 7)
+insert into shops values('Köln', 'DE', 'Köln@detego.com', 'Penny', 'Tonsley', 'ptonsley3@engadget.com', 6, 876, 4259, 12, 0.902, 0.936, 10)
+insert into shops values('Frankfurt am Main', 'DE', 'Frankfurt@detego.com', 'Andy', 'Giuroni', 'agiuroni4@europa.eu', 7, 965, 2815, 7, 0.971, 0.965, 8)
+insert into shops values('Stuttgart', 'DE', 'Stuttgart@detego.com', 'Nolly', 'Fairham', 'nfairham5@51.la', 5, 733, 2089, 21, 0.837, 0.984, 5)
+insert into shops values('Düsseldorf', 'DE', 'Düsseldorf@detego.com', 'Kissie', 'Delany', 'kdelany6@over-blog.com', 6, 999, 3065, 16, 0.889, 0.827, 8)
+insert into shops values('Dortmund', 'DE', 'Dortmund@detego.com', 'Chris', 'Darby', 'cdarby7@chron.com', 5, 512, 2378, 20, 0.826, 0.943, 5)
+insert into shops values('Essen', 'DE', 'Essen@detego.com', 'Gnni', 'Surphliss', 'gsurphliss8@mit.edu', 6, 1041, 3782, 28, 0.975, 0.917, 15)
+insert into shops values('Bremen', 'DE', 'Bremen@detego.com', 'Cory', 'Vivian', 'cvivian9@t.co', 3, 319, 1794, 4, 0.817, 0.808, 14)
+insert into shops values('Leipzig', 'DE', 'Leipzig@detego.com', 'Raquela', 'Siene', 'rsienea@cbslocal.com', 4, 537, 2853, 20, 0.975, 0.962, 15)
+insert into shops values('Dresden', 'DE', 'Dresden@detego.com', 'Melitta', 'O''Cannan', 'mocannanb@livejournal.com', 7, 732, 4261, 18, 0.894, 0.999, 15)
+insert into shops values('Hannover', 'DE', 'Hannover@detego.com', 'Derrek', 'Ross', 'drossc@java.com', 7, 753, 3277, 9, 0.902, 0.848, 6)
+insert into shops values('Nürnberg', 'DE', 'Nürnberg@detego.com', 'Vanya', 'Berard', 'vberardd@wordpress.com', 5, 825, 3715, 9, 0.979, 0.835, 13)
+insert into shops values('Duisburg', 'DE', 'Duisburg@detego.com', 'Ario', 'Hancorn', 'ahancorne@cyberchimps.com', 4, 682, 2501, 17, 0.922, 0.899, 12)
+insert into shops values('Bochum', 'DE', 'Bochum@detego.com', 'Trumaine', 'Franzen', 'tfranzenf@mayoclinic.com', 5, 954, 3605, 5, 0.949, 0.872, 5)
+insert into shops values('Wuppertal', 'DE', 'Wuppertal@detego.com', 'Chalmers', 'Newing', 'cnewingg@yahoo.com', 6, 910, 3258, 13, 0.804, 0.958, 10)
+insert into shops values('Bielefeld', 'DE', 'Bielefeld@detego.com', 'Arlen', 'Hardwell', 'ahardwellh@jugem.jp', 4, 776, 2255, 14, 0.987, 0.896, 11)
+insert into shops values('Bonn', 'DE', 'Bonn@detego.com', 'Neile', 'Wimmer', 'nwimmeri@springer.com', 6, 1074, 4358, 25, 0.946, 0.965, 6)
+insert into shops values('Münster', 'DE', 'Münster@detego.com', 'Pammi', 'Cherrett', 'pcherrettj@amazon.de', 6, 798, 3223, 9, 0.99, 0.873, 9)
+insert into shops values('Karlsruhe', 'DE', 'Karlsruhe@detego.com', 'Dorolice', 'Lindenblatt', 'dlindenblattk@wired.com', 6, 1011, 3873, 7, 0.91, 0.882, 5)
+insert into shops values('Mannheim', 'DE', 'Mannheim@detego.com', 'Klemens', 'O''Neill', 'koneilll@histats.com', 3, 555, 2147, 9, 0.899, 0.815, 12)
+insert into shops values('Augsburg', 'DE', 'Augsburg@detego.com', 'Abbey', 'O''Keeffe', 'aokeeffem@forbes.com', 6, 602, 3127, 15, 0.844, 0.801, 10)
+insert into shops values('Wiesbaden', 'DE', 'Wiesbaden@detego.com', 'Marlowe', 'Maccraw', 'mmaccrawn@naver.com', 4, 561, 2374, 20, 0.824, 0.814, 14)
+insert into shops values('Gelsenkirchen', 'DE', 'Gelsenkirchen@detego.com', 'Siobhan', 'Padilla', 'spadillao@webeden.co.uk', 6, 990, 4113, 9, 0.95, 0.891, 14)
+insert into shops values('Mönchengladbach', 'DE', 'Mönchengladbach@detego.com', 'Tobi', 'MacKeig', 'tmackeigp@eventbrite.com', 3, 391, 2226, 8, 0.837, 0.973, 7)
+insert into shops values('Braunschweig', 'DE', 'Braunschweig@detego.com', 'Sonnie', 'Beldham', 'sbeldhamq@eventbrite.com', 6, 729, 3401, 13, 0.951, 0.865, 15)
+insert into shops values('Chemnitz', 'DE', 'Chemnitz@detego.com', 'Alexis', 'Preator', 'apreatorr@techcrunch.com', 4, 493, 3120, 13, 0.825, 0.922, 5)
+insert into shops values('Aachen', 'DE', 'Aachen@detego.com', 'Sondra', 'Edinborough', 'sedinboroughs@bloomberg.com', 5, 568, 2398, 10, 0.885, 0.861, 11)
+insert into shops values('Kiel', 'DE', 'Kiel@detego.com', 'Moses', 'Killiner', 'mkillinert@naver.com', 4, 436, 1718, 8, 0.856, 0.879, 8)
+insert into shops values('Halle (Saale)', 'DE', 'Halle@detego.com', 'Andriette', 'Liffey', 'aliffeyu@wix.com', 4, 559, 3025, 13, 0.981, 0.96, 15)
+insert into shops values('Magdeburg', 'DE', 'Magdeburg@detego.com', 'Nickola', 'Kench', 'nkenchv@mit.edu', 5, 809, 2141, 11, 0.942, 0.983, 5)
+insert into shops values('Krefeld', 'DE', 'Krefeld@detego.com', 'Kerby', 'Pecht', 'kpechtw@free.fr', 5, 683, 3874, 17, 0.806, 0.843, 12)
+insert into shops values('Freiburg im Breisgau', 'DE', 'Freiburg@detego.com', 'Prinz', 'Verrico', 'pverricox@redcross.org', 6, 1185, 2417, 19, 0.981, 0.984, 5)
+insert into shops values('Lübeck', 'DE', 'Lübeck@detego.com', 'Byrom', 'Ferre', 'bferrey@unc.edu', 6, 611, 3292, 8, 0.814, 0.922, 8)
+insert into shops values('Oberhausen', 'DE', 'Oberhausen@detego.com', 'Tracy', 'Bucklee', 'tbuckleez@netlog.com', 4, 523, 2646, 12, 0.872, 0.948, 8)
+insert into shops values('Erfurt', 'DE', 'Erfurt@detego.com', 'Bryan', 'Papis', 'bpapis10@wordpress.com', 4, 792, 2086, 10, 0.992, 0.841, 7)
+insert into shops values('Mainz', 'DE', 'Mainz@detego.com', 'Leonhard', 'Duffil', 'lduffil11@mapquest.com', 3, 469, 1729, 3, 0.927, 0.863, 9)
+insert into shops values('Rostock', 'DE', 'Rostock@detego.com', 'Agnes', 'McIlenna', 'amcilenna12@gnu.org', 5, 720, 3228, 16, 0.966, 0.877, 12)
+insert into shops values('Kassel', 'DE', 'Kassel@detego.com', 'Prentice', 'Skerman', 'pskerman13@t.co', 3, 565, 2315, 13, 0.907, 0.849, 8)
+insert into shops values('Hagen', 'DE', 'Hagen@detego.com', 'Amity', 'McBride', 'amcbride14@uiuc.edu', 5, 885, 3354, 6, 0.955, 0.963, 12)
+insert into shops values('Saarbrücken', 'DE', 'Saarbrücken@detego.com', 'Georgie', 'Trumper', 'gtrumper15@google.fr', 4, 735, 2443, 16, 0.894, 0.84, 11)
+insert into shops values('Hamm', 'DE', 'Hamm@detego.com', 'Orelee', 'Dumbare', 'odumbare16@gnu.org', 6, 970, 3174, 18, 0.869, 0.967, 12)
+insert into shops values('Mülheim an der Ruhr', 'DE', 'Mülheim@detego.com', 'Berny', 'Troyes', 'btroyes17@ebay.co.uk', 4, 540, 2840, 10, 0.922, 0.982, 6)
+insert into shops values('Ludwigshafen am Rhein', 'DE', 'Ludwigshafen@detego.com', 'Tobias', 'Chiverstone', 'tchiverstone18@jiathis.com', 6, 1105, 3994, 23, 0.805, 0.951, 13)
+insert into shops values('Potsdam', 'DE', 'Potsdam@detego.com', 'Wandis', 'Esposita', 'wesposita19@ebay.com', 6, 643, 3909, 9, 0.933, 0.983, 8)
+insert into shops values('Leverkusen', 'DE', 'Leverkusen@detego.com', 'Rachel', 'Bau', 'rbau1a@printfriendly.com', 6, 987, 4561, 22, 0.987, 0.999, 14)
+insert into shops values('Oldenburg', 'DE', 'Oldenburg@detego.com', 'Virgie', 'Kondratenya', 'vkondratenya1b@blinklist.com', 3, 405, 2320, 9, 0.838, 0.916, 7)
+insert into shops values('Osnabrück', 'DE', 'Osnabrück@detego.com', 'Rhianna', 'McDonough', 'rmcdonough1c@oaic.gov.au', 6, 767, 4289, 23, 0.857, 0.805, 15)
+insert into shops values('Solingen', 'DE', 'Solingen@detego.com', 'Mayer', 'Bingle', 'mbingle1d@msn.com', 3, 329, 1697, 6, 0.958, 0.982, 7)
+insert into shops values('Herne', 'DE', 'Herne@detego.com', 'Antonetta', 'Ashment', 'aashment1e@usatoday.com', 3, 552, 2209, 12, 0.928, 0.819, 8)
+insert into shops values('Neuss', 'DE', 'Neuss@detego.com', 'Tanhya', 'Wildblood', 'twildblood1f@360.cn', 5, 535, 3581, 11, 0.978, 0.881, 9)
+insert into shops values('Heidelberg', 'DE', 'Heidelberg@detego.com', 'Danella', 'McAuley', 'dmcauley1g@aboutads.info', 4, 796, 2394, 11, 0.939, 0.804, 8)
+insert into shops values('Darmstadt', 'DE', 'Darmstadt@detego.com', 'Grethel', 'Tchir', 'gtchir1h@dion.ne.jp', 3, 314, 2331, 11, 0.886, 0.808, 5)
+insert into shops values('Paderborn', 'DE', 'Paderborn@detego.com', 'Araldo', 'McEvoy', 'amcevoy1i@wordpress.org', 5, 978, 3216, 20, 0.896, 0.942, 5)
+insert into shops values('Regensburg', 'DE', 'Regensburg@detego.com', 'Belva', 'Luckwell', 'bluckwell1j@engadget.com', 5, 942, 2029, 24, 0.807, 0.86, 5)
+insert into shops values('Ingolstadt', 'DE', 'Ingolstadt@detego.com', 'Carolina', 'Hellyar', 'chellyar1k@businesswire.com', 2, 220, 1146, 7, 0.898, 0.821, 9)
+insert into shops values('Würzburg', 'DE', 'Würzburg@detego.com', 'Eamon', 'Bubbear', 'ebubbear1l@wordpress.org', 4, 603, 3063, 8, 0.895, 0.92, 10)
+insert into shops values('Wolfsburg', 'DE', 'Wolfsburg@detego.com', 'Rachel', 'Dumbreck', 'rdumbreck1m@indiegogo.com', 4, 670, 1919, 10, 0.82, 0.929, 14)
+insert into shops values('Fürth', 'DE', 'Fürth@detego.com', 'Jobyna', 'Duncan', 'jduncan1n@illinois.edu', 3, 313, 1622, 7, 0.905, 0.982, 9)
+insert into shops values('Ulm', 'DE', 'Ulm@detego.com', 'Marney', 'Ravel', 'mravel1o@mtv.com', 6, 1183, 4766, 21, 0.907, 0.857, 6)
+insert into shops values('Offenbach am Main', 'DE', 'Offenbach@detego.com', 'Allin', 'McShee', 'amcshee1p@vimeo.com', 6, 814, 3391, 23, 0.833, 0.899, 12)
+insert into shops values('Heilbronn', 'DE', 'Heilbronn@detego.com', 'Orelie', 'Kersaw', 'okersaw1q@fastcompany.com', 3, 537, 1311, 13, 0.815, 0.905, 6)
+insert into shops values('Pforzheim', 'DE', 'Pforzheim@detego.com', 'Madison', 'Axelbey', 'maxelbey1r@ft.com', 4, 556, 2102, 19, 0.983, 0.831, 12)
+insert into shops values('Göttingen', 'DE', 'Göttingen@detego.com', 'Darren', 'Breckenridge', 'dbreckenridge1s@buzzfeed.com', 6, 981, 3820, 27, 0.863, 0.817, 12)
+insert into shops values('Bottrop', 'DE', 'Bottrop@detego.com', 'Eldridge', 'Gosnoll', 'egosnoll1t@ihg.com', 6, 672, 2775, 21, 0.926, 0.803, 8)
+insert into shops values('Recklinghausen', 'DE', 'Recklinghausen@detego.com', 'Roderich', 'Gratland', 'rgratland1u@bigcartel.com', 4, 676, 2384, 6, 0.846, 0.986, 10)
+insert into shops values('Reutlingen', 'DE', 'Reutlingen@detego.com', 'Christoforo', 'Frederick', 'cfrederick1v@comcast.net', 2, 333, 831, 5, 0.817, 0.895, 14)
+insert into shops values('Koblenz', 'DE', 'Koblenz@detego.com', 'Heath', 'Beamand', 'hbeamand1w@alibaba.com', 5, 875, 3306, 19, 0.855, 0.814, 9)
+insert into shops values('Bergisch Gladbach', 'DE', 'BergischGladbach@detego.com', 'Andros', 'Stammirs', 'astammirs1x@mysql.com', 2, 296, 1442, 3, 0.85, 0.969, 8)
+insert into shops values('Remscheid', 'DE', 'Remscheid@detego.com', 'Merola', 'Rupert', 'mrupert1y@purevolume.com', 4, 400, 3025, 5, 0.966, 0.929, 14)
+insert into shops values('Bremerhaven', 'DE', 'Bremerhaven@detego.com', 'Caryn', 'Cracie', 'ccracie1z@google.com.hk', 4, 712, 2884, 10, 0.839, 0.866, 10)
+insert into shops values('Jena', 'DE', 'Jena@detego.com', 'Georgina', 'Edinburgh', 'gedinburgh20@comcast.net', 3, 540, 2164, 3, 0.874, 0.829, 6)
+insert into shops values('Trier', 'DE', 'Trier@detego.com', 'Saunders', 'Keveren', 'skeveren21@vk.com', 6, 892, 3211, 7, 0.841, 0.869, 5)
+insert into shops values('Erlangen', 'DE', 'Erlangen@detego.com', 'Milissent', 'Scarman', 'mscarman22@pbs.org', 5, 567, 2127, 16, 0.96, 0.915, 7)
+insert into shops values('Moers', 'DE', 'Moers@detego.com', 'Giana', 'Lethebridge', 'glethebridge23@wiley.com', 2, 253, 1475, 9, 0.85, 0.957, 9) 

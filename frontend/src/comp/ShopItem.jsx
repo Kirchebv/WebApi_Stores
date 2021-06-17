@@ -1,31 +1,17 @@
 import React from 'react';
-import Context from '../context';
-
-const styles = {
-    li: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '.5rem 1rem',
-        border: '1px solid #ccc',
-        borderRadius: '4px',
-        marginBottom: '.5rem'
-    },
-    input: {
-        marginRight: '1rem'
-    }
-}
+import {Link}  from 'react-router-dom';
 
 function ShopItem(props) {
-    const {removeShop} = React.useContext(Context);
-
     return (
-        <li style={styles.li}>
-            <span>
-                {props.shop.title}
-            </span>
-            <button className='rm' onClick={removeShop.bind(null, props.shop.id)}>&times;</button>
-        </li>
+        <tr className="position-relative">
+            <th scope="row">{props.index + 1}</th>
+            <td>{props.shop.store}</td>
+            <td>{props.shop.countryCode}</td>
+            <td>{props.shop.storeEmail}</td>
+            <td>{props.shop.storeMgr_FirstName + ' ' + props.shop.storeMgr_LastName}</td>
+            <td>{props.shop.storeMgr_Email}</td>
+            <td><Link className='link-primary float-right' to={`/shop/${props.shop.id}`}>Изменить</Link></td>
+        </tr>
     )
 }
 

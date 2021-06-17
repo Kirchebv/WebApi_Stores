@@ -33,9 +33,11 @@ namespace WebApi_Stores
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
-            //services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
+            //services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
+            services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<DbService>();
+
+            services.AddCors();
 
             services.AddControllers();
 
@@ -61,6 +63,8 @@ namespace WebApi_Stores
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder => builder.AllowAnyOrigin().WithMethods("PUT", "DELETE", "GET", "POST"));
 
             //app.UseStaticFiles(new StaticFileOptions()
             //{
