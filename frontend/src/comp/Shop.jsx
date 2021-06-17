@@ -44,35 +44,51 @@ function Shop(props) {
         }
         else
         {
-            //addShop(shop);
+            shop.id = 0;
+            addShop(shop);
         }
     }
 
     function onClickDelete(e) {
         removeShop(id);
-        setShop({});
+        setShop({
+            id: 0,
+            store: "",
+            countryCode: "",
+            storeEmail: "",
+            storeMgr_FirstName: "",
+            storeMgr_LastName: "",
+            storeMgr_Email: "",
+            category: "",
+            stock_Backstore: 0,
+            stock_Frontstore: 0,
+            stock_ShoppingWindow: 0,
+            stockAccuracy: 0,
+            onFloorAvailability: 0,
+            stock_MeanAge_days: 0
+        });
         setUpdateType(false);
     }
 
     return(
         <Fragment>
             {loading ? <Loader /> : (
-                <form className="row g-3" noValidate onSubmit={onSubmit}>
+                <form className="row g-3 p-3" noValidate onSubmit={onSubmit}>
                     <div className="col-md-4 was-validated">
                         <label htmlFor="store" className="form-label">Store</label>
                         <input type="text" className="form-control" id="store" value={shop.store} required onChange={onChange}/>
                     </div>
                     <div className="col-md-2 was-validated">
                         <label htmlFor="category" className="form-label">Category</label>
-                        <input type="text" className="form-control" id="category" value={shop.category} required onChange={onChange}/>
+                        <input type="number" min="0" step="1" className="form-control" id="category" value={shop.category} required onChange={onChange}/>
                     </div>            
                     <div className="col-md-2 was-validated">
                         <label htmlFor="countryCode" className="form-label">Сountry сode</label>
-                        <input type="text" className="form-control" id="countryCode" value={shop.countryCode} required onChange={onChange}/>
+                        <input type="text" maxlength="2" className="form-control" id="countryCode" value={shop.countryCode} required onChange={onChange}/>
                     </div>
                     <div className="col-md-4 was-validated">
                         <label htmlFor="storeEmail" className="form-label">Email</label>
-                        <input type="text" className="form-control" id="storeEmail" value={shop.storeEmail} required onChange={onChange}/>
+                        <input type="email" className="form-control" id="storeEmail" value={shop.storeEmail} required onChange={onChange}/>
                     </div>
                     <div className="col-md-4 was-validated">
                         <label htmlFor="storeMgr_FirstName" className="form-label">Manager firstname</label>
@@ -84,43 +100,42 @@ function Shop(props) {
                     </div>
                     <div className="col-md-4 was-validated">
                         <label htmlFor="storeMgr_Email" className="form-label">Manager email</label>
-                        <input type="text" className="form-control" id="storeMgr_Email" value={shop.storeMgr_Email} required onChange={onChange}/>
+                        <input type="email" className="form-control" id="storeMgr_Email" value={shop.storeMgr_Email} required onChange={onChange}/>
                     </div>
                     <div className="row g-3">
                         <div className="col-md-2">
-                            <label htmlFor="stock_backstore" className="form-label">Stock backstore</label>
-                            <input type="text" className="form-control" id="stock_backstore" value={shop.stock_backstore} onChange={onChange}/>
+                            <label htmlFor="stock_Backstore" className="form-label">Stock backstore</label>
+                            <input type="number" min="0" step="1" className="form-control" id="stock_Backstore" value={shop.stock_Backstore} onChange={onChange}/>
                         </div>
                         <div className="col-md-2">
-                            <label htmlFor="stock_frontstore" className="form-label">Stock frontstore</label>
-                            <input type="text" className="form-control" id="stock_frontstore" value={shop.stock_frontstore} onChange={onChange}/>
+                            <label htmlFor="stock_Frontstore" className="form-label">Stock frontstore</label>
+                            <input type="number" min="0" step="1" className="form-control" id="stock_Frontstore" value={shop.stock_Frontstore} onChange={onChange}/>
                         </div>
                         <div className="col-md-2">
-                            <label htmlFor="stock_shoppingwindow" className="form-label">Stock shopping window</label>
-                            <input type="text" className="form-control" id="stock_shoppingwindow" value={shop.stock_shoppingwindow} onChange={onChange}/>
+                            <label htmlFor="stock_ShoppingWindow" className="form-label">Stock shopping window</label>
+                            <input type="number" min="0" step="1" className="form-control" id="stock_ShoppingWindow" value={shop.stock_ShoppingWindow} onChange={onChange}/>
                         </div>
                         <div className="col-md-2">
-                            <label htmlFor="stockaccuracy" className="form-label">Stock accuracy</label>
-                            <input type="text" className="form-control" id="stockaccuracy" value={shop.stockaccuracy} onChange={onChange}/>
+                            <label htmlFor="stockAccuracy" className="form-label">Stock accuracy</label>
+                            <input type="number" min="0" className="form-control" id="stockAccuracy" value={shop.stockAccuracy} onChange={onChange}/>
                         </div>
                         <div className="col-md-2">
-                            <label htmlFor="onflooravailability" className="form-label">On floor availability</label>
-                            <input type="text" className="form-control" id="onflooravailability" value={shop.onflooravailability} onChange={onChange}/>
+                            <label htmlFor="onFloorAvailability" className="form-label">On floor availability</label>
+                            <input type="number" min="0" className="form-control" id="onFloorAvailability" value={shop.onFloorAvailability} onChange={onChange}/>
                         </div>
                         <div className="col-md-2">
-                            <label htmlFor="stock_meanage_days" className="form-label">Stock meanage days</label>
-                            <input type="text" className="form-control" id="stock_meanage_days" value={shop.stock_meanage_days} onChange={onChange}/>
+                            <label htmlFor="stock_MeanAge_days" className="form-label">Stock meanage days</label>
+                            <input type="number" min="0" step="1" className="form-control" id="stock_MeanAge_days" value={shop.stock_MeanAge_days} onChange={onChange}/>
                         </div>
                     </div>
 
-                    <div className="col-12">
+                    <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                         <button className="btn btn-primary" type="submit">{updateType ? 'Update shop' : 'Add shop'}</button>
+                        {updateType ? (
+                                <button className="btn btn-danger" type="button" onClick={onClickDelete}>Delete</button>
+                            ) : null
+                        }
                     </div>
-                    {updateType ? (
-                        <div className="col-12">
-                            <button className="btn btn-danger" type="button" onClick={onClickDelete}>Delete</button>
-                        </div>) : null
-                    }
                 </form>
                 )
             }

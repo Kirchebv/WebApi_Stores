@@ -73,7 +73,7 @@ namespace WebApi_Stores.Repositories
             using var scope = _provider.CreateScope();
             var Context = scope.ServiceProvider.GetRequiredService<ShopContext>();
 
-            return Context.Shops.ToList<Shop>();
+            return Context.Shops.OrderBy(el => el.Store).ToList<Shop>();
         }
 
         public ShopСharacteristicsDTO GetCharacteristics(int id)

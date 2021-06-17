@@ -16,6 +16,7 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Net.Http.Headers;
 
 namespace WebApi_Stores
 {
@@ -33,8 +34,8 @@ namespace WebApi_Stores
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
-            //services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
-            services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<ShopContext>(options => options.UseNpgsql(connection));
+            //services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<DbService>();
 
             services.AddCors();
@@ -56,7 +57,7 @@ namespace WebApi_Stores
             app.UseSwagger();
             app.UseSwaggerUI(c => {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop controller");
-                c.RoutePrefix = "";
+                //c.RoutePrefix = "";
             });
 
             if (env.IsDevelopment())
@@ -64,13 +65,13 @@ namespace WebApi_Stores
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder => builder.AllowAnyOrigin().WithMethods("PUT", "DELETE", "GET", "POST"));
+            app.UseCors(builder => builder.AllowAnyOrigin().WithMethods("PUT", "DELETE", "GET", "POST").WithHeaders(HeaderNames.ContentType));
 
-            //app.UseStaticFiles(new StaticFileOptions()
-            //{
-            //    FileProvider = new PhysicalFileProvider(
-            //    Path.Combine(Directory.GetCurrentDirectory(), @"Frontend"))
-            //});
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(
+                Path.Combine(Directory.GetCurrentDirectory(), @"frontend"))
+            });
 
             //app.UseHttpsRedirection();
 

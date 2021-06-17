@@ -11,10 +11,9 @@ function App() {
   const [loading, setLoading] = React.useState(true);
 
   function loadShop() {
-    fetch('https://localhost:44314/api/Shop')
+    fetch(`https://${document.location.host}/api/Shop`)
         .then(response => response.json())
         .then(json => {
-          console.log(json);
           setShops(json);
           setFilterShops(json);
           setLoading(false);
@@ -22,20 +21,19 @@ function App() {
   }
 
   function removeShop(id) {
-    return fetch(`https://localhost:44314/api/Shop/${id}`, {method: 'DELETE', mode: 'cors'});
+    return fetch(`https://${document.location.host}/api/Shop/${id}`, {method: 'DELETE', mode: 'cors'});
   }
 
   function getShop(id) {
-    return fetch(`https://localhost:44314/api/Shop/${id}`, {method: 'GET', mode: 'cors'});
+    return fetch(`https://${document.location.host}/api/Shop/${id}`, {method: 'GET', mode: 'cors'});
   }
 
   function addShop(shop) {
-    //fetch(`https://localhost:44314/api/Shop/${id}`, {method: 'DELETE', mode: 'cors'}).then(() => loadShop());
+    return fetch(`https://${document.location.host}/api/Shop`, {method: 'POST', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json;charset=utf-8'}});
   }
 
   function updateShop(shop) {
-    console.log(shop)
-    fetch(`https://localhost:44314/api/Shop/${shop.id}`, {method: 'PUT', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json'}});
+    fetch(`https://${document.location.host}/api/Shop/${shop.id}`, {method: 'PUT', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json;charset=utf-8'}});
   }
 
   function filterList(text){
@@ -52,7 +50,7 @@ function App() {
         <Switch>
           <Route exact path="/"><ShopList shops={filteredShops} loading={loading}></ShopList></Route>
           <Route path="/shop/:id"><Shop></Shop></Route>
-          <Route path="/new" />
+          <Route path="/new"><Shop></Shop></Route>
         </Switch>
       </Context.Provider>
     </BrowserRouter>
