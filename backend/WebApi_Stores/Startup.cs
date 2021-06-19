@@ -38,7 +38,7 @@ namespace WebApi_Stores
             //services.AddDbContext<ShopContext>(options => options.UseSqlServer(connection));
             services.AddSingleton<DbService>();
 
-            services.AddCors();
+            //services.AddCors();
 
             services.AddControllers();
 
@@ -65,7 +65,7 @@ namespace WebApi_Stores
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(builder => builder.AllowAnyOrigin().WithMethods("PUT", "DELETE", "GET", "POST").WithHeaders(HeaderNames.ContentType));
+            //app.UseCors(builder => builder.AllowAnyOrigin().WithMethods("PUT", "DELETE", "GET", "POST").WithHeaders(HeaderNames.ContentType));
 
             app.UseStaticFiles(new StaticFileOptions()
             {
