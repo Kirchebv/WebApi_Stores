@@ -70,7 +70,7 @@ namespace WebApi_Stores
             app.UseStaticFiles(new StaticFileOptions()
             {
                 FileProvider = new PhysicalFileProvider(
-                Path.Combine(Directory.GetCurrentDirectory(), @"frontend"))
+                Path.Combine(Directory.GetCurrentDirectory(), @"../../frontend/build"))
             });
 
             //app.UseHttpsRedirection();
@@ -82,6 +82,12 @@ namespace WebApi_Stores
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.Run(ctx =>
+            {
+                ctx.Response.Redirect("/index.html");
+                return Task.FromResult(0);
             });
         }
     }

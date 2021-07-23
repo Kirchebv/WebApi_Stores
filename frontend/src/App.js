@@ -11,7 +11,7 @@ function App() {
   const [loading, setLoading] = React.useState(true);
 
   function loadShop() {
-    fetch(`http://${document.location.host}/api/Shop`)
+    fetch(`https://${document.location.host}/api/Shop`)
         .then(response => response.json())
         .then(json => {
           setShops(json);
@@ -21,19 +21,19 @@ function App() {
   }
 
   function removeShop(id) {
-    return fetch(`http://${document.location.host}/api/Shop/${id}`, {method: 'DELETE', mode: 'cors'});
+    return fetch(`https://${document.location.host}/api/Shop/${id}`, {method: 'DELETE', mode: 'cors'});
   }
 
   function getShop(id) {
-    return fetch(`http://${document.location.host}/api/Shop/${id}`, {method: 'GET', mode: 'cors'});
+    return fetch(`https://${document.location.host}/api/Shop/${id}`, {method: 'GET', mode: 'cors'});
   }
 
   function addShop(shop) {
-    return fetch(`http://${document.location.host}/api/Shop`, {method: 'POST', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json;charset=utf-8'}});
+    return fetch(`https://${document.location.host}/api/Shop`, {method: 'POST', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json;charset=utf-8'}});
   }
 
   function updateShop(shop) {
-    fetch(`http://${document.location.host}/api/Shop/${shop.id}`, {method: 'PUT', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json;charset=utf-8'}});
+    fetch(`https://${document.location.host}/api/Shop/${shop.id}`, {method: 'PUT', mode: 'cors', body: JSON.stringify(shop),headers: {'Content-Type': 'application/json;charset=utf-8'}});
   }
 
   function filterList(text){
